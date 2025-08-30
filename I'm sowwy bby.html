@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm Truly Sorry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      background: #ff80ab;
+      color: #fff;
+      padding: 40px 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.8rem; margin: 0; text-shadow: 2px 2px 0 #f50057; }
+    header p { font-size: 1.3rem; margin-top: 10px; text-shadow: 1px 1px 0 #f50057; }
+
+    main { max-width: 900px; margin: 30px auto; padding: 0 20px; position: relative; }
+
+    /* Sections with fade */
+    .section {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+      pointer-events: none;
+    }
+    .section.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+      z-index: 1;
+    }
+
+    .section h2 { color: #ff4081; text-align: center; text-shadow: 1px 1px 0 #ff80ab; }
+    .section p { font-size: 1.1rem; line-height: 1.6; margin: 15px 0; }
+
+    /* Photos */
+    .photos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px; }
+    .photos img {
+      width: 200px; height: 200px; border: 5px solid #ff4081;
+      border-radius: 10px; cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photos img:hover { transform: scale(1.05) rotate(2deg); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+    /* Typewriter */
+    .typewriter { display: inline-block; border-right: 2px solid #ff4081; white-space: pre-line; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; z-index: 2000;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9); justify-content: center; align-items: center; flex-direction: column;
+    }
+    .lightbox img { max-width: 90%; max-height: 80%; border-radius: 10px; }
+    .close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+    .nav { position: absolute; top: 50%; font-size: 50px; color: white; cursor: pointer; user-select: none; padding: 10px; border-radius: 50%; }
+    .nav.prev { left: 20px; } .nav.next { right: 20px; }
+    .nav:hover { background: rgba(255,255,255,0.2); }
+
+    /* Music wrapper */
+    #music-wrapper {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 3000;
+    }
+    /* Music button */
+    #music-btn {
+      background: #ff4081;
+      color: white;
+      font-size: 24px;
+      padding: 12px 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    #music-btn:hover { transform: scale(1.1); }
+    #music-btn.playing { background: #4caf50; }
+
+    /* "Click Here" text + arrow */
+    #click-text {
+      font-family: 'Comic Neue', cursive;
+      font-size: 18px;
+      color: #ff4081;
+      font-weight: bold;
+      animation: bounce 1.5s infinite ease-in-out, glow 2s infinite alternate;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff80ab, 0 0 10px #ff4081; }
+      to { text-shadow: 0 0 15px #ff80ab, 0 0 25px #ff4081; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>I'm Truly Sowwy chandaa🙇‍♂️</h1>
+    <p>A heartfelt apology to you bby</p>
+  </header>
+
+  <main>
+    <!-- Letter Section -->
+    <section class="section letter active">
+      <h2>A Letter my sweetest bbg</h2>
+      <p class="typewriter" data-text="Dear CHANDAAAA,
+
+I know you're upset with me, and I truly regret my actions. I'm writing this letter to express my sincere apology. 
+I value every moment we share and every smile you bring into my life. Please allow me the chance to make things right 
+and show you how deeply I care. I promise to be more thoughtful and considerate in the future. 
+
+Your happiness means the world to me, and I will do everything in my power to make you happy and disappoint you less chandaa. 
+I rellyy didnt wanted to ruin your mood and make you sad. I hope you can find it in your heart to forgive me. 
+I feeel really guilty for doing this bbyy please forgive meee bbbyyyy. 
+aap khafa hoti hain to bechaini hoti hai mera bachaa please narazgi khatam kr lein bbyy🙁🎀
+
+With all my heart,
+bewakoof yasher💋"></p>
+    </section>
+
+    <!-- Poem Section -->
+    <section class="section poem">
+      <h2>A Poem for my bbyy</h2>
+      <p class="typewriter" data-text="In a world of colors bright,
+My mistakes have dimmed our light.
+With every beat of this tender heart,
+I long for a brand new start.
+
+Roses are red, violets are blue,
+Every moment apart, I miss you.
+Let laughter return, let joy prevail,
+For our love is a timeless tale."></p>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="section photos">
+      <h2>I'm Solly Again</h2>
+      <div class="gallery">
+        <img src="./img1.jpg" alt="Memory 1">
+        <img src="./img2.jpg" alt="Memory 2">
+        <img src="./img3.jpg" alt="Memory 3">
+        <img src="./img4.jpg" alt="Memory 4">
+        <img src="./img5.jpg" alt="Memory 5">
+        <img src="./img6.jpg" alt="Memory 6">
+        <img src="./WhatsApp%20Image%202025-08-31%20at%2000.30.10_6a63f97a.jpg" alt="Memory 7">
+        <img src="./WhatsApp%20Image%202025-08-31%20at%2000.30.10_6aec3711.jpg" alt="Memory 8">
+        <img src="./WhatsApp%20Image%202025-08-31%20at%2000.30.10_9a7585bd.jpg" alt="Memory 9">
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+    <div class="nav prev">&#10094;</div>
+    <div class="nav next">&#10095;</div>
+  </div>
+
+  <!-- Music -->
+  <audio id="bg-music" src="Chalo Jaane Do - Bhoothnath 320 Kbps-[AudioTrimmer.com].mp3" loop></audio>
+  <div id="music-wrapper">
+    <div id="music-btn">🎵</div>
+    <span id="click-text">⬅ Click Here</span>
+  </div>
+<script>
+  const sections = document.querySelectorAll(".section");
+let currentSection = 0;
+let typingInProgress = false; 
+let typingInterval = null;
+let currentTypeElement = null;
+let currentText = "";
+let currentIndex = 0;
+
+const music = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-btn");
+const clickText = document.getElementById("click-text");
+let isPlaying = false;
+
+// Section switching with typewriter control
+document.body.addEventListener("click", () => {
+  if (document.getElementById("lightbox").style.display === "flex") return;
+
+  // If typing is still happening, finish instantly
+  if (typingInProgress) {
+    finishTyping();
+    return;
+  }
+
+  // Otherwise, go to next section
+  sections[currentSection].classList.remove("active");
+  currentSection = (currentSection + 1) % sections.length;
+  sections[currentSection].classList.add("active");
+
+  // Start typewriter for next section
+  startTypewriter(sections[currentSection]);
+});
+
+// Music toggle
+function toggleMusic() {
+  if (isPlaying) {
+    music.pause();
+    isPlaying = false;
+    musicBtn.classList.remove("playing");
+    clickText.style.display = "inline-block";
+  } else {
+    music.play().catch(()=>{});
+    isPlaying = true;
+    musicBtn.classList.add("playing");
+    clickText.style.display = "none"; 
+  }
+}
+musicBtn.addEventListener("click", (e) => { e.stopPropagation(); toggleMusic(); });
+clickText.addEventListener("click", (e) => { e.stopPropagation(); toggleMusic(); });
+
+// Typewriter effect
+function startTypewriter(section) {
+  const el = section.querySelector(".typewriter");
+  if (!el || el.dataset.done) return;
+  currentTypeElement = el;
+  currentText = el.getAttribute("data-text");
+  el.textContent = "";
+  currentIndex = 0;
+  typingInProgress = true;
+
+  typingInterval = setInterval(() => {
+    if (currentIndex < currentText.length) {
+      el.textContent += currentText.charAt(currentIndex);
+      currentIndex++;
+    } else {
+      finishTyping();
+    }
+  }, 40);
+}
+
+// Instantly finish typing
+function finishTyping() {
+  if (typingInterval) clearInterval(typingInterval);
+  if (currentTypeElement) {
+    currentTypeElement.textContent = currentText;
+    currentTypeElement.dataset.done = true;
+    currentTypeElement.style.borderRight = "none";
+  }
+  typingInProgress = false;
+}
+
+// Start first typewriter immediately
+startTypewriter(sections[0]);
+
+</script>
+</body>
+</html>
